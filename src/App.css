@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dancing Script', cursive;
     background: #fefaf5;
     color: #5e4b3c;
   }
@@ -53,6 +53,7 @@ body {
   }
   .galerie-img {
     width: 100%;
+    height: 300px; /* oder eine andere feste Höhe */
+    object-fit: cover;
     border-radius: 12px;
   }
-  
