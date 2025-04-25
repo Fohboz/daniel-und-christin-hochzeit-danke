@@ -4,7 +4,7 @@ import './App.css';
 const sampleImages = Array.from({ length: 9 }, (_, i) => `/daniel-und-christin-hochzeit-danke/gallery/foto${i + 1}.jpeg`);
 
 export default function App() {
-  const [selectedImg, setSelectedImg] = useState(null); // ✅ jetzt richtig platziert
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
     <>
@@ -37,21 +37,40 @@ export default function App() {
               src={img}
               alt={`Foto ${i + 1}`}
               className="galerie-img"
-              onClick={() => setSelectedImg(img)}
+              onClick={() => setSelectedIndex(i)}
             />
           ))}
         </section>
 
-        {selectedImg && (
-          <div className="lightbox" onClick={() => setSelectedImg(null)}>
-            <img
-              src={selectedImg}
-              alt="Großansicht"
-              className="lightbox-img"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        )}
+        {selectedIndex !== null && (
+  <div className="lightbox" onClick={() => setSelectedIndex(null)}>
+    <button className="lightbox-close" onClick={() => setSelectedIndex(null)}>×</button>
+    <button
+      className="lightbox-prev"
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedIndex((selectedIndex - 1 + sampleImages.length) % sampleImages.length);
+      }}
+    >
+      ‹
+    </button>
+    <img
+      src={sampleImages[selectedIndex]}
+      alt="Großansicht"
+      className="lightbox-img"
+      onClick={(e) => e.stopPropagation()}
+    />
+    <button
+      className="lightbox-next"
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedIndex((selectedIndex + 1) % sampleImages.length);
+      }}
+    >
+      ›
+    </button>
+  </div>
+)}
       </div>
     </>
   );
