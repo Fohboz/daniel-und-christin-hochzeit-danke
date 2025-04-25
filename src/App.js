@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
 
-const sampleImages = Array.from({ length: 10 }, (_, i) => `/gallery/foto${i + 1}.jpg`);
+const sampleImages = Array.from({ length: 10 }, (_, i) => `public/gallery/foto${i + 1}.jpg`);
 
 export default function App() {
   return (
     <div className="app">
       <section className="hero">
-        <img src="/hero.jpg" alt="Hero" className="hero-img" />
+        <img src="public/hero.jpg" alt="Hero" className="hero-img" />
         <div className="hero-text">
           <h1>Dankeschön</h1>
           <p>Es war uns ein Fest mit euch</p>
         </div>
         <audio controls autoPlay loop>
-          <source src="/song.mp3" type="audio/mp3" />
+          <source src="public/song.mp3" type="audio/mp3" />
           Dein Browser unterstützt keine Audio-Wiedergabe.
         </audio>
       </section>
