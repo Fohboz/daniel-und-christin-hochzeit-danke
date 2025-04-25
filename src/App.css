@@ -4,8 +4,16 @@ body {
     background: #fefaf5;
     color: #5e4b3c;
   }
+
+.app {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
   
   .hero {
+    width: 100%;
     position: relative;
     text-align: center;
   }
@@ -66,4 +74,26 @@ body {
     margin-top: 0.5rem;
     font-size: 0.95rem;
     color: #555;
+  }
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: zoom-out;
+  }
+  
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    cursor: default;
+  }
+  
+  .galerie-img {
+    cursor: zoom-in;
   }

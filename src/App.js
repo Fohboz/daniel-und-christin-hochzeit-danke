@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 const sampleImages = Array.from({ length: 9 }, (_, i) => `/daniel-und-christin-hochzeit-danke/gallery/foto${i + 1}.jpeg`);
 
 export default function App() {
+  const [selectedImg, setSelectedImg] = useState(null); // ✅ jetzt richtig platziert
+
   return (
-    <div className="app">
+    <>
       <section className="hero">
         <img src="/daniel-und-christin-hochzeit-danke/hero.jpg" alt="Hero" className="hero-img" />
         <div className="hero-text">
@@ -19,19 +21,38 @@ export default function App() {
         <p className="audio-text">🎵 Abspielen: <em>unser Hochzeitssong</em></p>
       </section>
 
-      <section className="danke-text">
-        <h2>Ihr Lieben</h2>
-        <h3>wir sagen herzlich dankeschön</h3>
-        <p>Wir hatten einen unvergesslichen Tag mit unzähligen wunderschönen Momenten. Dank Euch wird er uns für immer in Erinnerung bleiben.</p>
-        <p>Wir möchten uns ganz herzlich für die zahlreichen Glückwünsche, Geschenke und Aufmerksamkeiten zu unserer Hochzeit bedanken. Habt vielen Dank.</p>
-        <p className="signatur">Daniel & Christin</p>
-      </section>
+      <div className="app">
+        <section className="danke-text">
+          <h2>Ihr Lieben</h2>
+          <h3>wir sagen herzlich dankeschön</h3>
+          <p>Wir hatten einen unvergesslichen Tag mit unzähligen wunderschönen Momenten. Dank Euch wird er uns für immer in Erinnerung bleiben.</p>
+          <p>Wir möchten uns ganz herzlich für die zahlreichen Glückwünsche, Geschenke und Aufmerksamkeiten zu unserer Hochzeit bedanken. Habt vielen Dank.</p>
+          <p className="signatur">Daniel & Christin</p>
+        </section>
 
-      <section className="galerie">
-        {sampleImages.map((img, i) => (
-          <img key={i} src={img} alt={`Foto ${i + 1}`} className="galerie-img" />
-        ))}
-      </section>
-    </div>
+        <section className="galerie">
+          {sampleImages.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Foto ${i + 1}`}
+              className="galerie-img"
+              onClick={() => setSelectedImg(img)}
+            />
+          ))}
+        </section>
+
+        {selectedImg && (
+          <div className="lightbox" onClick={() => setSelectedImg(null)}>
+            <img
+              src={selectedImg}
+              alt="Großansicht"
+              className="lightbox-img"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
