@@ -57,3 +57,13 @@ body {
     object-fit: cover;
     border-radius: 12px;
   }
+  .audio-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .audio-text {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+  }

@@ -16,6 +16,7 @@ export default function App() {
           <source src={process.env.PUBLIC_URL + '/song.mp3'} type="audio/mp3" />
           Dein Browser unterstützt keine Audio-Wiedergabe.
         </audio>
+        <p className="audio-text">🎵 Abspielen: <em>unser Hochzeitssong</em></p>
       </section>
 
       <section className="danke-text">
