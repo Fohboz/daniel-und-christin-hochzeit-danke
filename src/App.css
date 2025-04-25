@@ -33,13 +33,14 @@ body {
     text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
     border-radius: 12px;
     width: 80%; /* Damit der Text nicht zu breit wird */
+    font-size: 10vw; 
   }
   
   .hero-text h1 {
-    font-size: 4vw;
+    font-size: 4rem;
   }
   .hero-text p {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
   }
   .danke-text {
     padding: 2rem;
