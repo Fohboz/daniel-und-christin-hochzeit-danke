@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/daniel-und-christin-hochzeit-danke/static/css/main.a94fce2e.css",
-    "main.js": "/daniel-und-christin-hochzeit-danke/static/js/main.c327d227.js",
+    "main.css": "/daniel-und-christin-hochzeit-danke/static/css/main.1a193ed4.css",
+    "main.js": "/daniel-und-christin-hochzeit-danke/static/js/main.cffe93bd.js",
     "index.html": "/daniel-und-christin-hochzeit-danke/index.html",
-    "main.a94fce2e.css.map": "/daniel-und-christin-hochzeit-danke/static/css/main.a94fce2e.css.map",
-    "main.c327d227.js.map": "/daniel-und-christin-hochzeit-danke/static/js/main.c327d227.js.map"
+    "main.1a193ed4.css.map": "/daniel-und-christin-hochzeit-danke/static/css/main.1a193ed4.css.map",
+    "main.cffe93bd.js.map": "/daniel-und-christin-hochzeit-danke/static/js/main.cffe93bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.a94fce2e.css",
-    "static/js/main.c327d227.js"
+    "static/css/main.1a193ed4.css",
+    "static/js/main.cffe93bd.js"
   ]
 }
