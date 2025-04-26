@@ -75,7 +75,7 @@ export default function App() {
   </div>
 
   <div class="footer-bottom">
-    © 2025 Kevelopments – Alle Rechte vorbehalten. Email: <a href="kevin.siemers@outlook.com">kevin.siemers@outlook.com</a>
+    © 2025 Kevelopments – Alle Rechte vorbehalten.<br></br>Email: <a href="kevin.siemers@outlook.com">kevin.siemers@outlook.com</a>
   </div>
     </>
   );
