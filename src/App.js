@@ -43,35 +43,40 @@ export default function App() {
         </section>
 
         {selectedIndex !== null && (
-  <div className="lightbox" onClick={() => setSelectedIndex(null)}>
-    <button className="lightbox-close" onClick={() => setSelectedIndex(null)}>×</button>
-    <button
-      className="lightbox-prev"
-      onClick={(e) => {
-        e.stopPropagation();
-        setSelectedIndex((selectedIndex - 1 + sampleImages.length) % sampleImages.length);
-      }}
-    >
-      ‹
-    </button>
-    <img
-      src={sampleImages[selectedIndex]}
-      alt="Großansicht"
-      className="lightbox-img"
-      onClick={(e) => e.stopPropagation()}
-    />
-    <button
-      className="lightbox-next"
-      onClick={(e) => {
-        e.stopPropagation();
-        setSelectedIndex((selectedIndex + 1) % sampleImages.length);
-      }}
-    >
-      ›
-    </button>
+          <div className="lightbox" onClick={() => setSelectedIndex(null)}>
+            <button className="lightbox-close" onClick={() => setSelectedIndex(null)}>×</button>
+            <button
+              className="lightbox-prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedIndex((selectedIndex - 1 + sampleImages.length) % sampleImages.length);
+              }}
+            >
+              ‹
+            </button>
+            <img
+              src={sampleImages[selectedIndex]}
+              alt="Großansicht"
+              className="lightbox-img"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              className="lightbox-next"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedIndex((selectedIndex + 1) % sampleImages.length);
+              }}
+            >
+              ›
+            </button>
+          </div>
+        )}
+
   </div>
-)}
-      </div>
+
+  <div class="footer-bottom">
+    © 2025 Kevelopments – Alle Rechte vorbehalten. Email: <a href="kevin.siemers@outlook.com">kevin.siemers@outlook.com</a>
+  </div>
     </>
   );
 }

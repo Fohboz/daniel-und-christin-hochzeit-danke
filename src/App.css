@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Dancing Script', cursive;
+    overflow-x: hidden;
     background: #fefaf5;
     color: #5e4b3c;
   }
@@ -139,4 +140,19 @@ body {
   
   .galerie-img {
     cursor: zoom-in;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #5e4b3c;
+    background-color: #fefaf5;
+  }
+  .footer-bottom a {
+    color: #5e4b3c;
+    text-decoration: none;
+  }
+  .footer-bottom a:hover {
+    text-decoration: underline;
   }
