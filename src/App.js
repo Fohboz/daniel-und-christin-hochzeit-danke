@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const sampleImages = Array.from({ length: 9 }, (_, i) => `/daniel-und-christin-hochzeit-danke/gallery/foto${i + 1}.jpeg`);
+const sampleImages = Array.from({ length: 63 }, (_, i) => `/daniel-und-christin-hochzeit-danke/gallery/foto${i + 1}.jpeg`);
 
 export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(null);
