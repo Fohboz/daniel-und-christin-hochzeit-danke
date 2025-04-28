@@ -2,7 +2,7 @@
   "name": "hochzeits-danke-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://fohboz.github.io/daniel-und-christin-hochzeit-danke",
+  "homepage": "https://kevelopments.github.io/daniel-und-christin-hochzeit-danke",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -27,5 +27,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
