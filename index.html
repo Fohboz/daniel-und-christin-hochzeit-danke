@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel & Christin - Thank You!</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- GLightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+
+  <style>
+    /* Cremefarbener Hintergrund */
+
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #faf0e6;
+      ;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    /* Beige Hintergrundfarbe */
+    .bg-beige {
+      background-color: #f5f5dc;
+      /* Beige Farbe */
+    }
+
+    .bg-creme {
+      background-color: #faf0e6;
+      /* Cremefarbe */
+    }
+
+    /* Full Width Section */
+    .full-width {
+      width: 100%;
+      /* Ensure the section takes up the full width */
+      padding-left: 0;
+      /* Optional: remove any padding on the left */
+      padding-right: 0;
+      /* Optional: remove any padding on the right */
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('hero.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+      padding: 50px 0;
+      /* Fügt oben und unten Platz hinzu */
+      background-color: #faf0e6e3;
+    }
+
+    /* Galerie Container */
+    #gallery {
+      display: flex;
+      /* Flexbox aktivieren */
+      flex-wrap: wrap;
+      /* Bilder sollen umbrechen, wenn nicht genug Platz da ist */
+      justify-content: space-between;
+      /* Bilder gleichmäßig verteilen */
+      gap: 20px;
+      /* Abstand zwischen den Bildern */
+    }
+
+    /* Galerie Bilder */
+    .gallery img {
+      width: 100%;
+      /* Bilder nehmen die volle Breite des Containers ein */
+      height: 300px;
+      /* Höhe der Bilder fixieren (damit alle Bilder gleich hoch sind) */
+      object-fit: cover;
+      /* Bilder füllen den Bereich ohne Verzerrung */
+      border-radius: 8px;
+      /* Optional: Abgerundete Ecken für das Bild */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Optional: Bild Schatten für Stil */
+    }
+
+    /* Stil für die Container der Bilder */
+    #gallery .col-md-4 {
+      flex: 0 1 calc(33.333% - 20px);
+      /* Stellt sicher, dass jedes Bild ein Drittel des Containers einnimmt */
+      margin-bottom: 20px;
+      /* Abstand nach unten für jedes Bild */
+    }
+
+/* Gallery Image Hover Effect */
+.gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Slight zoom and rotation */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a larger shadow for depth */
+    filter: brightness(1.1); /* Slightly increase brightness */
+}
+
+    footer {
+      background-color: #dedfd8;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    /* Sticky Navbar styling */
+.navbar {
+    position: fixed;
+    justify-content: space-between; /* Center the content */
+    gap: 20px; /* Add gap between elements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-family: 'Great Vibes', cursive;
+    z-index: 10;
+}
+
+
+.navbar.show {
+    opacity: 1;
+}
+
+/* Play button styling */
+.play-button {
+    background-color: beige;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Vertically align the content */
+    width: 200px; /* Fixed width for the button */
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Vertically align the content */
+    width: 200px; /* Fixed width for the button */
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.play-button i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+.play-button:hover {
+    background-color: rgb(233, 233, 229);
+}
+
+
+/* Styling for the text (Daniel and Date) */
+.name {
+    font-size: 30px;
+    flex-grow: 1;  /* Take up remaining space */
+    text-align: center;  /* Center the text */
+}
+
+.white{
+  color: white;
+}
+
+.date {
+    font-size: 30px;
+}
+  </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navbar -->
+    <div class="navbar" id="navbar">
+      <button class="play-button" id="playButton"><i class="fas fa-music"></i>  Play our song</button>
+      <span class="name">Daniel & Christin</span>
+      <span class="white">_______</span>
+      <span class="date">31.03.2025</span>
+      <audio id="audio" src="song.mp3" preload="auto"></audio>
+  </div>
+  <script>
+    const navbar = document.getElementById('navbar');
+const playButton = document.getElementById('playButton');
+const audio = document.getElementById('audio');
+
+// When user scrolls, show the navbar
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) { // Change 50 to the number of pixels you want before it appears
+        navbar.classList.add('show');
+    } else {
+        navbar.classList.remove('show');
+    }
+});
+
+// Play audio when play button is clicked
+playButton.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play();
+        playButton.innerHTML = '<i class="fas fa-music"></i> Pause</span>';
+    } else {
+        audio.pause();
+        playButton.innerHTML = '<i class="fas fa-music"></i> Play our Song</span>';
+    }
+});
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Thank You</h1>
+    <p>It was the best day of our lives!</p>
+  </section>
+
+  <!-- Text Section -->
+  <section class="container py-5 bg-creme full-width" data-aos="fade-up">
+    <div class="text-center mb-4">
+      <h2>Dear Guests</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p class="lead text-center">
+          We are incredibly grateful for everyone who celebrated our special day with us. It was truly unforgettable,
+          filled with love, laughter, and beautiful memories. Thank you for being part of our journey!
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container py-5" data-aos="fade-up">
+      <div class="text-center mb-4">
+        <h2>Gallery</h2>
+      </div>
+      <div id="gallery" class="row g-4 gallery"></div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Assuming you have 20 photos named photo1.jpg, photo2.jpg, ..., photo20.jpg
+      const images = Array.from({ length: 63 }, (_, i) => `images/foto${i + 1}.jpeg`);
+
+      const galleryContainer = document.getElementById('gallery');
+
+      images.forEach((imgSrc) => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4';
+        col.innerHTML = `
+        <a href="${imgSrc}" class="glightbox" data-gallery="wedding">
+          <img src="${imgSrc}" alt="Wedding Photo" class="img-fluid rounded">
+        </a>
+      `;
+        galleryContainer.appendChild(col);
+      });
+
+      // Fix: no const lightbox = ... again
+      GLightbox({
+        selector: '.glightbox'
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer bg-creme">
+    <div class="container text-center">
+      <p>&copy; Kevelopments - All rights reserved 2025</p>
+      <p>kevin.siemers@outlook.com</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+
+    // AOS init
+    AOS.init({
+      duration: 1200,
+    });
+
+    // GLightbox init
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+
+</body>
+
+</html>
