@@ -269,33 +269,7 @@ body {
 
 <body>
 
- 
-  <script>
-    const navbar = document.getElementById('navbar');
-    const playButton = document.getElementById('playButton');
-    const audio = document.getElementById('audio');
-
-    // When user scrolls, show the navbar
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 500) { // Change 50 to the number of pixels you want before it appears
-        navbar.classList.add('show');
-      } else {
-        navbar.classList.remove('show');
-      }
-    });
-
-    playButton.addEventListener('click', function () {
-      if (audio.paused) {
-        audio.play();
-        playButton.innerHTML = '<i class="fas fa-pause"></i>';
-        playButton.classList.add('glow');
-      } else {
-        audio.pause();
-        playButton.innerHTML = '<i class="fas fa-play"></i>';
-        playButton.classList.remove('glow');
-      }
-    });
-  </script>
+  
 
   <!-- Hero Section -->
   <section class="hero">
