@@ -44,7 +44,7 @@
       font-family: 'Great Vibes', cursive;
       font-weight: bold;
     }
-  
+
 
     /* Beige Hintergrundfarbe */
     .bg-beige {
@@ -82,11 +82,11 @@
       }
     }
 
-    .hero h1 {
+    h1 {
       font-size: clamp(32px, 8vw, 64px);
     }
 
-    .hero p {
+    p {
       font-size: clamp(16px, 4vw, 24px);
     }
 
@@ -255,6 +255,29 @@
     footer p {
       margin: 2px 0;
       line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .underline {
+      display: inline-block;
+      /* Ensure it's treated as an inline-block so it aligns with text */
+      max-width: 100%;
+      /* Ensure it doesn't overflow the width of the container */
+      margin-top: -70px;
+    }
+
+    .underline2 {
+      display: inline-block;
+      /* Ensure it's treated as an inline-block so it aligns with text */
+      max-width: 100%;
+      /* Ensure it doesn't overflow the width of the container */
+      transform: rotate(180deg);
+      margin-top: -50px;
+      margin-bottom: -90px;
     }
   </style>
 </head>
@@ -329,9 +352,12 @@
     <div class="container py-5" data-aos="fade-up">
       <div class="text-center mb-4">
         <h1>Gallerie</h1>
+        <img src="underline.png" alt="underline2" class="underline2">
       </div>
       <div id="gallery" class="row g-4 gallery"></div>
+      <img src="underline.png" alt="underline" class="underline">
     </div>
+   
   </section>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
