@@ -32,7 +32,7 @@
     /* Cremefarbener Hintergrund */
 
 
-body {
+    body {
       font-family: 'Lora', sans-serif;
       scroll-behavior: smooth;
       background-color: #faf0e6;
@@ -98,13 +98,13 @@ body {
     }
 
     #gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-/* 
+    /* 
 * {
   outline: 1px solid rgba(255, 0, 0, 0.1); /* For debug: shows which element is overflowing 
 }*/
@@ -291,7 +291,7 @@ body {
         playButton.classList.add('glow');
       } else {
         audio.pause();
-        playButton.innerHTML = '<i class="fas fa-play"></i>';
+        playButton.innerHTML = '<i class="fas fa-play"></i><i class="fas fa-music ms-1"></i>';
         playButton.classList.remove('glow');
       }
     });
