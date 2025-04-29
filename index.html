@@ -76,6 +76,14 @@
       position: relative;
     }
 
+    .hero h1 {
+      font-size: clamp(32px, 8vw, 64px);
+    }
+
+    .hero p {
+      font-size: clamp(16px, 4vw, 24px);
+    }
+
     /* Gallery Section */
     .gallery-section {
       padding: 50px 0;
@@ -109,134 +117,173 @@
       /* Optional: Bild Schatten für Stil */
     }
 
-    /* Stil für die Container der Bilder */
     #gallery .col-md-4 {
-      flex: 0 1 calc(33.333% - 20px);
-      /* Stellt sicher, dass jedes Bild ein Drittel des Containers einnimmt */
+      flex: 0 1 100%;
       margin-bottom: 20px;
-      /* Abstand nach unten für jedes Bild */
     }
 
-/* Gallery Image Hover Effect */
-.gallery img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transitions */
-}
+    @media (min-width: 768px) {
+      #gallery .col-md-4 {
+        flex: 0 1 calc(50% - 20px);
+      }
+    }
 
-.gallery img:hover {
-    transform: scale(1.1); /* Slight zoom and rotation */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a larger shadow for depth */
-    filter: brightness(1.1); /* Slightly increase brightness */
-}
+    @media (min-width: 992px) {
+      #gallery .col-md-4 {
+        flex: 0 1 calc(33.333% - 20px);
+      }
+    }
+
+    /* Gallery Image Hover Effect */
+    .gallery img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      /* Smooth transitions */
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      /* Slight zoom and rotation */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      /* Add a larger shadow for depth */
+      filter: brightness(1.1);
+      /* Slightly increase brightness */
+    }
 
     footer {
       background-color: #dedfd8;
-      padding: 10px 0;
+   
       text-align: center;
       font-size: 14px;
     }
+
     /* Sticky Navbar styling */
-.navbar {
-    position: fixed;
-    justify-content: space-between; /* Center the content */
-    gap: 20px; /* Add gap between elements */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-family: 'Great Vibes', cursive;
-    z-index: 10;
-}
+    .navbar {
+      position: fixed;
+      justify-content: space-between;
+      /* Center the content */
+      gap: 20px;
+      /* Add gap between elements */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      font-family: 'Great Vibes', cursive;
+      z-index: 10;
+    }
 
 
-.navbar.show {
-    opacity: 1;
-}
+    .navbar.show {
+      opacity: 1;
+    }
 
-/* Play button styling */
-.play-button {
-    background-color: beige;
-    justify-content: center; /* Center the content */
-    align-items: center; /* Vertically align the content */
-    width: 200px; /* Fixed width for the button */
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    justify-content: center; /* Center the content */
-    align-items: center; /* Vertically align the content */
-    width: 200px; /* Fixed width for the button */
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 5px;
-}
+    .play-button {
+      background-color:#faf0e6;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(0, 0, 0);
+      border: 0.2px solid black;
+      padding: 10px 20px;
+      font-size: clamp(14px, 4vw, 18px);
+      cursor: pointer;
+      margin-right: 10px;
+      border-radius: 8px;
+      display: flex;
+      gap: 8px;
+      min-width: 60px;
+      max-width: 90%;
+      width: auto;
+    }
 
-.play-button i {
-            margin-right: 8px; /* Space between icon and text */
-        }
+    .play-button i {
+      margin-right: 8px;
+      /* Space between icon and text */
+    }
 
-.play-button:hover {
-    background-color: rgb(233, 233, 229);
-}
+    .play-button:hover {
+      background-color: rgb(233, 233, 229);
+    }
 
+    .play-button.glow {
+      box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+      background-color: #fff8dc;
+      animation: pulse 1.5s infinite;
+    }
 
-/* Styling for the text (Daniel and Date) */
-.name {
-    font-size: 30px;
-    flex-grow: 1;  /* Take up remaining space */
-    text-align: center;  /* Center the text */
-}
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+      }
 
-.white{
-  color: white;
-}
+      50% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+      }
 
-.date {
-    font-size: 30px;
-}
+      100% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+      }
+    }
+
+    /* Styling for the text (Daniel and Date) */
+    .name {
+      font-size: clamp(20px, 5vw, 30px);
+      /* Take up remaining space */
+      text-align: center;
+      /* Center the text */
+    }
+
+    .white {
+      color: white;
+    }
+
+    .date {
+      font-size: clamp(18px, 5vw, 30px);
+    }
   </style>
 </head>
 
 <body>
 
-    <!-- Sticky Navbar -->
-    <div class="navbar" id="navbar">
-      <button class="play-button" id="playButton"><i class="fas fa-music"></i>  Play our song</button>
-      <span class="name">Daniel & Christin</span>
-      <span class="white">_______</span>
-      <span class="date">31.03.2025</span>
-      <audio id="audio" src="song.mp3" preload="auto"></audio>
+  <!-- Sticky Navbar -->
+  <div class="navbar" id="navbar">
+    <button class="play-button" id="playButton">
+      <i class="fas fa-play"></i>
+    </button>
+    <span class="name">Daniel & Christin</span>
+    <span class="date">31.03.2025</span>
+    <audio id="audio" src="song.mp3" preload="auto"></audio>
   </div>
   <script>
     const navbar = document.getElementById('navbar');
-const playButton = document.getElementById('playButton');
-const audio = document.getElementById('audio');
+    const playButton = document.getElementById('playButton');
+    const audio = document.getElementById('audio');
 
-// When user scrolls, show the navbar
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 500) { // Change 50 to the number of pixels you want before it appears
+    // When user scrolls, show the navbar
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 500) { // Change 50 to the number of pixels you want before it appears
         navbar.classList.add('show');
-    } else {
+      } else {
         navbar.classList.remove('show');
-    }
-});
+      }
+    });
 
-// Play audio when play button is clicked
-playButton.addEventListener('click', function() {
-    if (audio.paused) {
+    playButton.addEventListener('click', function () {
+      if (audio.paused) {
         audio.play();
-        playButton.innerHTML = '<i class="fas fa-music"></i> Pause</span>';
-    } else {
+        playButton.innerHTML = '<i class="fas fa-pause"></i>';
+        playButton.classList.add('glow');
+      } else {
         audio.pause();
-        playButton.innerHTML = '<i class="fas fa-music"></i> Play our Song</span>';
-    }
-});
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
+        playButton.classList.remove('glow');
+      }
+    });
   </script>
 
   <!-- Hero Section -->
@@ -248,7 +295,7 @@ playButton.addEventListener('click', function() {
   <!-- Text Section -->
   <section class="container py-5 bg-creme full-width" data-aos="fade-up">
     <div class="text-center mb-4">
-      <h2>Dear Guests</h2>
+      <h1>Dear Guests</h1>
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -265,7 +312,7 @@ playButton.addEventListener('click', function() {
   <section class="gallery-section">
     <div class="container py-5" data-aos="fade-up">
       <div class="text-center mb-4">
-        <h2>Gallery</h2>
+        <h1>Gallery</h1>
       </div>
       <div id="gallery" class="row g-4 gallery"></div>
     </div>
