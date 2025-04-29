@@ -34,6 +34,7 @@
 
 body {
       font-family: 'Lora', sans-serif;
+      scroll-behavior: smooth;
       background-color: #faf0e6;
       overflow-x: hidden;
       margin: 0;
@@ -106,18 +107,16 @@ body {
       background-color: #faf0e6e3;
     }
 
-    /* Galerie Container */
     #gallery {
-      display: flex;
-      /* Flexbox aktivieren */
-      flex-wrap: wrap;
-      /* Bilder sollen umbrechen, wenn nicht genug Platz da ist */
-      justify-content: space-between;
-      /* Bilder gleichmäßig verteilen */
-      gap: 20px;
-      /* Abstand zwischen den Bildern */
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.1); /* For debug: shows which element is overflowing */
+}
     /* Galerie Bilder */
     .gallery img {
       width: 100%;
