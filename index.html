@@ -40,6 +40,7 @@
     h1,
     h2 {
       font-family: 'Great Vibes', cursive;
+      font-weight: bold;
     }
 
     /* Beige Hintergrundfarbe */
@@ -73,19 +74,27 @@
       justify-content: center;
       align-items: center;
       color: white;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
       position: relative;
     }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh; /* Adjusted height for mobile */
-    background: url('hero.jpg') no-repeat center center/cover;
-    background-attachment: scroll; /* Scroll for mobile */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Softer text-shadow for mobile */
-  }
-}
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      .hero {
+        height: 90vh;
+        /* Adjusted height for mobile */
+        background: url('hero.jpg') no-repeat center center/cover;
+        background-attachment: scroll;
+        /* Scroll for mobile */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+      }
+    }
 
     .hero h1 {
       font-size: clamp(32px, 8vw, 64px);
@@ -97,7 +106,7 @@
 
     /* Gallery Section */
     .gallery-section {
-      padding: 50px 0;
+
       /* Fügt oben und unten Platz hinzu */
       background-color: #faf0e6e3;
     }
@@ -169,6 +178,7 @@
     /* Sticky Navbar styling */
     .navbar {
       font-family: 'Great Vibes', cursive;
+      font-weight: bold;
       position: fixed;
       justify-content: space-between;
       /* Center the content */
@@ -194,20 +204,21 @@
     }
 
     .play-button {
-  background-color: #faf0e6;
-  color: black;
-  border: 0.5px solid black;
-  padding: 10px;
-  font-size: clamp(18px, 5vw, 24px);
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(40px, 12vw, 60px);
-  height: clamp(40px, 12vw, 60px); /* Match width exactly */
-  margin-right: 10px;
-}
+      background-color: #faf0e6;
+      color: black;
+      border: 0.5px solid black;
+      padding: 10px;
+      font-size: clamp(18px, 5vw, 24px);
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: clamp(40px, 12vw, 60px);
+      height: clamp(40px, 12vw, 60px);
+      /* Match width exactly */
+      margin-right: 10px;
+    }
 
 
 
@@ -250,13 +261,12 @@
     .date {
       font-size: clamp(18px, 5vw, 30px);
     }
+
     footer p {
-  margin: 2px 0;
-  line-height: 1.5;
-}
-.text-center.mb-4 {
-  margin-top: 120px; /* Adjust this value to your preference */
-}
+      margin: 2px 0;
+      line-height: 1.5;
+    }
+
   </style>
 </head>
 
@@ -267,7 +277,7 @@
     <button class="play-button" id="playButton">
       <i class="fas fa-play"></i>
     </button>
-    <span class="name">   Daniel & Christin</span>
+    <span class="name"> Daniel & Christin</span>
     <span class="date">31.03.2025</span>
     <audio id="audio" src="song.mp3" preload="auto"></audio>
   </div>
@@ -312,9 +322,9 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <p class="lead text-center">
-          Wir hatten einen unvergesslichen Tag mit unzähligen wunderschönen Momenten. 
-          Dank Euch wird er uns für immer in Erinnerung bleiben. Wir möchten uns ganz herzlich für die zahlreichen 
-          Glückwünsche, Geschenke und Aufmerksamkeiten zu unserer Hochzeit bedanken. 
+          Wir hatten einen unvergesslichen Tag mit unzähligen wunderschönen Momenten.
+          Dank Euch wird er uns für immer in Erinnerung bleiben. Wir möchten uns ganz herzlich für die zahlreichen
+          Glückwünsche, Geschenke und Aufmerksamkeiten zu unserer Hochzeit bedanken.
         </p>
       </div>
     </div>
