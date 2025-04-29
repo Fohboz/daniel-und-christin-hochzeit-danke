@@ -77,6 +77,16 @@
       position: relative;
     }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Adjusted height for mobile */
+    background: url('hero.jpg') no-repeat center center/cover;
+    background-attachment: scroll; /* Scroll for mobile */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Softer text-shadow for mobile */
+  }
+}
+
     .hero h1 {
       font-size: clamp(32px, 8vw, 64px);
     }
