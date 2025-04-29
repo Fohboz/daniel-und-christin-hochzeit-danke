@@ -81,6 +81,7 @@ body {
       align-items: center;
       color: white;
       text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+      position: relative;
     }
 
     /* Media Query for Mobile Devices */
@@ -268,15 +269,7 @@ body {
 
 <body>
 
-  <!-- Sticky Navbar -->
-  <div class="navbar" id="navbar">
-    <button class="play-button" id="playButton">
-      <i class="fas fa-play"></i>
-    </button>
-    <span class="name"> Daniel & Christin</span>
-    <span class="date">31.03.2025</span>
-    <audio id="audio" src="song.mp3" preload="auto"></audio>
-  </div>
+ 
   <script>
     const navbar = document.getElementById('navbar');
     const playButton = document.getElementById('playButton');
